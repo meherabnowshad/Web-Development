@@ -1,0 +1,35 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0; 
+}
+
+.flag-container {
+    /* Standard flag ratio is 5:3 */
+    width: 600px; /* Example width */
+    height: 360px; /* 600 * (3/5) = 360 */
+    border: 1px solid #ccc; /* Optional: adds a slight border around the flag */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column; /* Stacks the stripes vertically */
+}
+
+.stripe {
+    width: 100%;
+    flex-grow: 1; 
+}
+
+.black {
+    background-color: #000000; /* Black */
+}
+
+.red {
+    background-color: #DD0000; /* Red */
+}
+
+.gold {
+    background-color: #FFCC00; /* Gold (Yellow) */
+}

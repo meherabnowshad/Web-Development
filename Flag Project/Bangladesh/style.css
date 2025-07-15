@@ -1,0 +1,42 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0; /* Just a light background for the page */
+}
+
+.flag-container {
+    /* Standard flag ratio is 10:6, or 5:3 */
+    width: 600px; /* Example width */
+    height: 360px; /* 600 * (3/5) = 360 */
+    border: 1px solid #ccc; /* Optional: adds a slight border around the flag */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.green-field {
+    width: 100%;
+    height: 100%;
+    background-color: #006A4E; /* Bangladesh Green */
+    position: relative; /* Needed for positioning the circle inside */
+    overflow: hidden; /* Ensures the circle doesn't spill out if slightly misaligned */
+}
+
+.red-circle {
+    width: 40%; /* Diameter of the circle is 40% of the flag's width */
+    height: 66.67%; /* Diameter is also 2/3rds of the flag's height (which is 60% of width, so 0.6 * 0.6667 = 0.4 of total width) */
+                  /* A simpler way to think: 40% of flag's width is 240px. 2/3 of flag's height (360px) is 240px. So diameter is 240px */
+    background-color: #F42A41; /* Bangladesh Red */
+    border-radius: 50%; /* Makes it a perfect circle */
+    position: absolute;
+
+    /* Positioning the circle offset from the center */
+    /* According to specifications, the center of the circle is at 45% of the length of the flag from the hoist (left) side. */
+    /* And exactly at the center vertically (50% from top). */
+    left: 45%; /* Center of the circle at 45% from left edge of the flag */
+    top: 50%; /* Center of the circle at 50% from top edge of the flag */
+
+    /* Adjust using transform to align the circle's center with the specified point */
+    transform: translate(-50%, -50%);
+}
